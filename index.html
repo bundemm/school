@@ -74,9 +74,10 @@
  
 var map = L.map('map').setView([42.628, 26.269], 7);
 	
-      L.tileLayer(
-       "https://stamen-tiles.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}@2x.png" // stamen toner tiles
-      ).addTo(map);
+      L.tileLayer('http://a.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
+    maxZoom: 18,
+      }).addTo(mymap);
 
       L.geoJSON(ttt).addTo(map);
       
